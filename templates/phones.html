@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Phones</title>
+</head>
+<body>
+<div style="text-align: center; margin-top: 100px;">
+
+    <h2>All Phones</h2>
+
+    {% for phone in phones %}
+        <div style="display: inline-block; width: 200px; margin: 15px; vertical-align: top;">
+            <img src="{{ phone.image.url }}" alt="{{ phone.phone }}" style="width: 100%; height: 200px; object-fit: contain;"><br>
+            <a href="{% url 'details' phone.id %}"><button style="border: 1px solid pink; margin-top: 10px;">{{ phone.phone }}</button></a>
+        </div>
+    {% endfor %}
+
+</div>
+
+
+</body>
+</html>

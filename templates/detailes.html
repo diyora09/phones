@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone</title>
+</head>
+<body>
+<div style="text-align:center;">
+    <h1>The Information about the Phones</h1>
+    <img src="{{ phone.image.url }}" alt="{{ phone.phone }}" style="max-width: 500px;">
+    <h3>Model: {{ phone.phone }}</h3>
+    <h3>Memory: {{ phone.year }}</h3>
+    <h3>Color: {{ phone.color }}</h3>
+    <h3>Price: {{ phone.price }}</h3>
+    <h3>Rating: {{ phone.rating }}</h3>
+
+
+
+    <a href="{% url 'phones' %}"><button style="margin-top:100px; margin-right:600px">Phones</button></a>
+</div>
+
+</body>
+</html>
